@@ -3,7 +3,6 @@ import "./TopNav.scss";
 
 function TopNav() {
   return (
-    <div className="App">
       <div className="top-nav">
         <a href="#">Home</a>
         <a href="#">About</a>
@@ -11,7 +10,6 @@ function TopNav() {
         <a href="#">Work</a>
         <a href="#">Contact</a>
       </div>
-    </div>
   );
 }
 
