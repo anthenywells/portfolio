@@ -58,7 +58,6 @@ function Resume() {
           <p>User Experience, Sketch, Adobe Illustrator, Adobe Photoshop</p>
         </div>
       </div>
-
       {Object.keys(resumeData).map(resKey => {
         return (
           <div className="resume__body">

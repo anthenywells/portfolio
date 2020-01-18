@@ -1,13 +1,19 @@
 .top-nav {
-  background: #1c2022;
+  background: transparent;
   width: 100%;
   display: flex;
   justify-content: center;
+  background: linear-gradient(
+    to bottom,
+    black,
+    transparent
+  );
   > a {
     padding: 1rem;
     font-weight: 600;
-    color: #e6e6e6;
+    color: #fff;
     text-decoration: none;
+    text-transform: uppercase;
     &:hover {
       color: rgb(187, 46, 31);
     }

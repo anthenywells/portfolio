@@ -1,5 +1,5 @@
 import React from 'react';
-import TopNav from "./components/TopNav/TopNav"
+import About from "./components/About/About"
 import Hero from "./components/Hero/Hero"
 import Resume from "./components/Resume/Resume"
 import './App.css';
@@ -7,8 +7,9 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <TopNav/>
+
       <Hero/>
+      <About />
       <Resume/>
     </div>
   );
