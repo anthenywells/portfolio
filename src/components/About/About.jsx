@@ -6,7 +6,7 @@ import { faFileDownload } from "@fortawesome/free-solid-svg-icons";
 
 function About() {
   return (
-    <div className="about">
+    <div className="about" id="about">
       <div className="about__body">
         <div className="about__pic">
           <img src={ProfilePic} alt="Profile Picture"/>

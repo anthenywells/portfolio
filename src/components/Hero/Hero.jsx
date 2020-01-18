@@ -1,30 +1,31 @@
 import React from "react";
-import TopNav from "../../components/TopNav/TopNav"
-
+import TopNav from "../../components/TopNav/TopNav";
 import "./Hero.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 function Hero() {
   return (
-    <div className="hero">
-    <TopNav/>
+    <div className="hero" id="home">
+      <TopNav />
       <div className="hero__heading">
         <h1>Antheny Wells</h1>
         <h2>Frontend Developer / Problem Solver</h2>
         <div className="hero__socials">
-          <a href="#">
+          <a href="https://www.linkedin.com/in/antheny/">
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
-
-          <a href="#">
+          <a href="https://github.com/anthenywells/">
             <FontAwesomeIcon icon={faGithub} />
           </a>
         </div>
       </div>
       <div className="hero__arrow">
-        <FontAwesomeIcon icon={faAngleDown} />
+        <Link to="about" smooth={true} duration={500}>
+          <FontAwesomeIcon icon={faAngleDown} />
+        </Link>
       </div>
     </div>
   );

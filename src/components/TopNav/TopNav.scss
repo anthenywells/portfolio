@@ -1,21 +1,22 @@
 .top-nav {
-  background: transparent;
+  position: fixed;
+  top: 0;
   width: 100%;
   display: flex;
   justify-content: center;
-  background: linear-gradient(
-    to bottom,
-    black,
-    transparent
-  );
+  // background: linear-gradient(to bottom, black, transparent);
   > a {
     padding: 1rem;
     font-weight: 600;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
+    mix-blend-mode: difference;
     &:hover {
       color: rgb(187, 46, 31);
     }
+  }
+  .active {
+    color: rgb(187, 46, 31);
   }
 }
