@@ -25,8 +25,8 @@ function About() {
             <p>Detroit, MI </p>
           </div>
           <div className="about__desc-download">
-            <a href={Resume} download>
-              <FontAwesomeIcon icon={faFileDownload} />
+            <a href={Resume} className="button" download>
+              <FontAwesomeIcon  icon={faFileDownload} />
               Download Resume
             </a>
           </div>

@@ -1,9 +1,9 @@
 import React from "react";
 import TopNav from "../../components/TopNav/TopNav";
+import Socials from "../../components/common/Socials/Socials"
 import "./Hero.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 function Hero() {
@@ -13,14 +13,7 @@ function Hero() {
       <div className="hero__heading">
         <h1>Antheny Wells</h1>
         <h2>Frontend Developer / Problem Solver</h2>
-        <div className="hero__socials">
-          <a href="https://www.linkedin.com/in/antheny/">
-            <FontAwesomeIcon icon={faLinkedin} />
-          </a>
-          <a href="https://github.com/anthenywells/">
-            <FontAwesomeIcon icon={faGithub} />
-          </a>
-        </div>
+        <Socials/>
       </div>
       <div className="hero__arrow">
         <Link to="about" smooth={true} duration={500}>

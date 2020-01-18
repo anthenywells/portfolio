@@ -30,16 +30,6 @@
     text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
   }
 }
-.hero__socials {
-  font-size: 2.5rem;
-  > a > svg {
-    margin: 0.5rem;
-    color: #e6e6e6;
-    &:hover {
-      color: rgb(187, 46, 31);
-    }
-  }
-}
 .hero__arrow {
   font-size: 3.5rem;
   margin-top: auto;
