@@ -1,0 +1,58 @@
+.resume {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.resume__body {
+  width: 96%;
+  display: flex;
+  max-width: 1020px;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid lightgrey;
+  &:first-of-type {
+
+  }
+}
+
+.resume__heading {
+  width: 20%;
+  display: flex;
+  margin: 1rem;
+  padding-top: 0.25rem;
+  > h2 {
+    font-weight: 600;
+    text-transform: uppercase;
+    > span {
+      border-bottom: 3px solid rgb(187, 46, 31);
+    }
+  }
+}
+.resume__skills {
+  width: 80%;
+  margin: 1rem;
+  > p {
+    color: rgb(131, 140, 149);
+    margin: 0.5rem 0;
+    &:first-of-type {
+      padding-top: 1.5rem;
+    }
+  }
+}
+.resume__desc {
+  width: 80%;
+  margin: 1rem;
+
+  > h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  > p {
+    color: rgb(131, 140, 149);
+    margin: 0.5rem 0;
+  }
+}

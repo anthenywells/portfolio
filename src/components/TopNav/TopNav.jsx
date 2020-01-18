@@ -6,7 +6,7 @@ function TopNav() {
       <div className="top-nav">
         <a href="#">Home</a>
         <a href="#">About</a>
-        <a href="#">Resume</a>
+        <a href="#resume">Resume</a>
         <a href="#">Work</a>
         <a href="#">Contact</a>
       </div>

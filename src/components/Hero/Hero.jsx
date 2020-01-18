@@ -8,7 +8,7 @@ function Hero() {
   return (
     <div className="hero">
       <div className="hero__heading">
-        <h1>I'm Antheny Wells</h1>
+        <h1>Antheny Wells</h1>
         <h2>Frontend Developer / Problem Solver</h2>
         <div className="hero__socials">
           <a href="#">
