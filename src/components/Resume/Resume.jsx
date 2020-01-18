@@ -46,7 +46,7 @@ const resumeData = {
 
 function Resume() {
   return (
-    <div className="resume" id="resume">
+    <div className="resume container" id="resume">
       <div className="resume__body">
         <div className="resume__heading">
           <h2>
