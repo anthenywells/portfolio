@@ -37,15 +37,15 @@ function Projects() {
       <div className="projects__body">
         {projectData.map(p => {
           return (
-            <div className="projects__card">
+            <div className="projects__card" key={p}>
               <img src={p.img} alt="" />
               <div className="projects__card-body">
                 <h5>{p.title}</h5>
                 <p>{p.blurb}</p>
-                <a href={p.demoLink} class="btn btn-primary">
+                <a href={p.demoLink}>
                   <FontAwesomeIcon icon={faGlobe} />
                 </a>
-                <a href={p.githubLink} class="btn btn-primary">
+                <a href={p.githubLink}>
                   <FontAwesomeIcon icon={faGithub} />
                 </a>
               </div>

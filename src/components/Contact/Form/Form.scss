@@ -4,7 +4,7 @@
   align-items: flex-end;
   color: #fff;
   > .button {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
   }
 }
 .form__email,
@@ -13,7 +13,7 @@
   width: 500px;
   max-width: 96%;
   > h2 {
-    margin: .5rem 0;
+    margin: 0.5rem 0;
     font-size: 1.25rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -24,11 +24,16 @@
     width: 100%;
     border: none;
     border-radius: 5px;
+    &::placeholder {
+      color: #B2BEC3;
+      opacity: 1;
+    }
   }
   > input {
-    line-height:2rem;
+    line-height: 2rem;
   }
   > textarea {
+    font-family: inherit;
     height: 9rem;
   }
 }

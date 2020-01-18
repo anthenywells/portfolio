@@ -3,12 +3,13 @@ import "./TopNav.scss";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 function TopNav() {
-  const navLinks = ["home", "about", "resume", "projects", "contact"];
+  const navLinks = ["home", "about", "resume", "contact"];
   return (
     <div className="top-nav">
       {navLinks.map(link => {
         return (
           <Link
+            key={link}
             activeClass="active"
             to={link}
             spy={true}

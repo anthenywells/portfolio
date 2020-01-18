@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import * as emailjs from "emailjs-com";
 import "./Form.scss";
+import {toTitleCase} from "../../../utils/utils"
 
 function Form() {
   const initialState = {
@@ -11,24 +12,24 @@ function Form() {
   const [formState, setFormState] = useState(initialState);
 
   const handleSubmit = _ => {
-    const templateId = "nope";
+    const templateId = "no";
     let templateParams = {
-      to_name: "nope",
-      subject: formState.name,
-      from_name: formState.email,
+      from_email: formState.email,
+      to_name: "no",
+      from_name: formState.name,
       message_html: formState.message
     };
-
     sendFeedback(templateId, templateParams);
   };
 
   const sendFeedback = (templateId, templateParams) => {
+    setFormState(initialState);
     emailjs
       .send(
         "default_service",
         templateId,
         templateParams,
-        "no ya dont"
+        "no"
       )
       .then(res => {
         console.log("Email successfully sent!");
@@ -43,24 +44,34 @@ function Form() {
 
   return (
     <form className="form">
-      {Object.keys(initialState).splice(0,2).map(key => {
-        return (
-          <div className={"form__" + key}>
-            <h2>{key}</h2>
-            <input
-              type="text"
-              onChange={e => setFormState({ [key]: e.target.value })}
-              placeholder={key}
-              required
-              value={formState[key]}
-            />
-          </div>
-        );
-      })}
+      {Object.keys(initialState)
+        .splice(0, 2)
+        .map(key => {
+          return (
+            <div className={"form__" + key} key={key}>
+              <h2>{key}</h2>
+              <input
+                name={key}
+                type={key === "email" ? "email" : "text"}
+                onChange={e =>
+                  setFormState({
+                    ...formState,
+                    [e.target.name]: e.target.value
+                  })
+                }
+                placeholder={toTitleCase(key)}
+                required
+                value={formState[key]}
+              />
+            </div>
+          );
+        })}
       <div className="form__textbox">
         <h2>Message</h2>
         <textarea
-          onChange={e => setFormState({ message: e.target.value })}
+          onChange={e =>
+            setFormState({ ...formState, message: e.target.value })
+          }
           placeholder="Tell me something cool"
           required
           value={formState.message}

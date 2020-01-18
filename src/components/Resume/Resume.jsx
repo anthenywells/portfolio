@@ -60,7 +60,7 @@ function Resume() {
       </div>
       {Object.keys(resumeData).map(resKey => {
         return (
-          <div className="resume__body">
+          <div className="resume__body" key={resKey}>
             <div className="resume__heading">
               <h2>
                 <span>{resKey}</span>
