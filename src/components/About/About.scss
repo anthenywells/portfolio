@@ -1,6 +1,9 @@
+@import "../../commonStyles/breakPoints.scss";
+@import "../../commonStyles/colorPalatte.scss";
+
 .about {
-  background: #1c2022;
-  color: #fff;
+  background: $black-1;
+  color: $white;
 }
 
 .about__body {
@@ -10,7 +13,7 @@
 }
 
 .about__pic {
-  width:20%;
+  width: 20%;
   margin: 1rem;
   display: flex;
   align-items: center;
@@ -26,25 +29,53 @@
   width: 80%;
   display: flex;
   flex-wrap: wrap;
-  color: #7A7A7A;
-  h2, p {
-    width:100%;
-    margin-top: .5rem;
+  color: $grey-1;
+  h2,
+  p {
+    width: 100%;
+    margin-top: 0.5rem;
   }
   h2 {
     margin: 0;
-    color: #fff;
+    color: $white;
     font-size: 1.25rem;
     font-weight: 600;
     text-transform: uppercase;
   }
   &-location {
-    width:50%;
+    width: 50%;
   }
   &-download {
-    width:50%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+@media screen and (max-width: $mobileMaxWidth) {
+  .about__body {
+    flex-direction: column;
+  }
+  .about__pic {
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+    img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  .about__desc {
+    margin: 0;
+    padding: 1rem;
+    width: 90%;
+    flex-direction: column;
+    &-location {
+      width: 100%;
+    }
+    &-download {
+      margin-top: 1rem;
+      width: 100%;
+    }
   }
 }

@@ -1,8 +1,10 @@
+@import "../../../commonStyles/colorPalatte.scss";
+
 .form {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  color: #fff;
+  color: $white;
   > .button {
     margin-top: 0.5rem;
   }
@@ -25,7 +27,7 @@
     border: none;
     border-radius: 5px;
     &::placeholder {
-      color: #B2BEC3;
+      color: $grey-2;
       opacity: 1;
     }
   }
@@ -35,5 +37,20 @@
   > textarea {
     font-family: inherit;
     height: 9rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .form {
+    width:100%;
+    align-items: center;
+    > .button {
+      width: 50%;
+    }
+  }
+  .form__email,
+  .form__name,
+  .form__textbox {
+    width:80%;
   }
 }

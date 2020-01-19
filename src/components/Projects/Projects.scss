@@ -1,5 +1,7 @@
+@import "../../commonStyles/colorPalatte.scss";
+
 .projects {
-  background: #808080;
+  background: $grey-3;
 }
 
 .projects__body {
@@ -10,7 +12,7 @@
 
 .projects__card {
   width: 300px;
-  background-color: #fff;
+  background-color: $white;
   border-radius: .5rem;
   transition: 0.3s;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);

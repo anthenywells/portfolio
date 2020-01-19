@@ -12,7 +12,7 @@ function Hero() {
       <TopNav />
       <div className="hero__heading">
         <h1>Antheny Wells</h1>
-        <h2>Frontend Developer / Problem Solver</h2>
+        <h2>Frontend Developer</h2>
         <Socials/>
       </div>
       <div className="hero__arrow">

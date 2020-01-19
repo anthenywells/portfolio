@@ -1,3 +1,5 @@
+@import "../../commonStyles/colorPalatte.scss";
+
 .top-nav {
   position: fixed;
   top: 0;
@@ -8,15 +10,15 @@
   > a {
     padding: 1rem;
     font-weight: 600;
-    color: #fff;
+    color: $white;
     text-decoration: none;
     text-transform: uppercase;
     mix-blend-mode: difference;
     &:hover {
-      color: rgb(187, 46, 31);
+      color: $primary;
     }
   }
   .active {
-    color: rgb(187, 46, 31);
+    color: $primary;
   }
 }

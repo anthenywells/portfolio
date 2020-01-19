@@ -1,5 +1,8 @@
+@import "../../commonStyles/colorPalatte.scss";
+@import "../../commonStyles/breakPoints.scss";
+
 .resume {
-  background: #fff;
+  background: $white;
 }
 
 .resume__body {
@@ -9,7 +12,7 @@
   padding-bottom: 1.5rem;
   border-bottom: 1px solid lightgrey;
   &:last-child {
-    border:none;
+    border: none;
   }
 }
 
@@ -22,7 +25,7 @@
     font-weight: 600;
     text-transform: uppercase;
     > span {
-      border-bottom: 3px solid rgb(187, 46, 31);
+      border-bottom: 3px solid $primary;
     }
   }
 }
@@ -30,7 +33,7 @@
   width: 80%;
   margin: 1rem;
   > p {
-    color: rgb(131, 140, 149);
+    color: $grey-1;
     margin: 0.5rem 0;
     &:first-of-type {
       padding-top: 1.5rem;
@@ -47,7 +50,24 @@
     margin-bottom: 0;
   }
   > p {
-    color: rgb(131, 140, 149);
+    color: $grey-1;
     margin: 0.5rem 0;
+  }
+}
+
+@media screen and (max-width: $mobileMaxWidth) {
+  .resume__body {
+    flex-direction: column;
+    align-items: center;
+  }
+  .resume__heading {
+    width:auto;
+    margin:0;
+  }
+  .resume__skills {
+    margin: 0;
+  }
+  .resume__desc {
+    margin:0;
   }
 }
