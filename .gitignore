@@ -12,6 +12,8 @@
 /build
 
 # misc
+/src/utils/keys.js
+
 .vscode
 .DS_Store
 .env.local

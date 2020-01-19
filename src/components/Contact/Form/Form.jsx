@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import * as emailjs from "emailjs-com";
 import "./Form.scss";
 import {toTitleCase} from "../../../utils/utils"
+import {templateId, userName, userId} from "../../../utils/keys"
 
 function Form() {
   const initialState = {
@@ -12,10 +13,9 @@ function Form() {
   const [formState, setFormState] = useState(initialState);
 
   const handleSubmit = _ => {
-    const templateId = "no";
     let templateParams = {
       from_email: formState.email,
-      to_name: "no",
+      to_name: userName,
       from_name: formState.name,
       message_html: formState.message
     };
@@ -29,7 +29,7 @@ function Form() {
         "default_service",
         templateId,
         templateParams,
-        "no"
+        userId
       )
       .then(res => {
         console.log("Email successfully sent!");
