@@ -3,7 +3,7 @@ import "./TopNav.scss";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 function TopNav() {
-  const navLinks = ["home", "about", "resume", "contact"];
+  const navLinks = ["home", "about", "resume", "projects", "contact"];
   return (
     <div className="top-nav">
       {navLinks.map(link => {
