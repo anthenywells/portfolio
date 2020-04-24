@@ -6,7 +6,6 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  // background: linear-gradient(to bottom, black, transparent);
   > a {
     padding: 1rem;
     font-weight: 600;
@@ -15,7 +14,7 @@
     text-transform: uppercase;
     mix-blend-mode: difference;
     &:hover {
-      color: $primary;
+      color: rgba($color: $primary, $alpha: .7);;
     }
   }
   .active {
